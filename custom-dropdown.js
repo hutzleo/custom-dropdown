@@ -8,6 +8,10 @@ template.innerHTML = `
             margin-bottom: 20px;
         }
 
+        :host([hidden]) {
+            display: none
+        }
+
         .drop-btn {
             background-color: #3498DB;
             color: white;
