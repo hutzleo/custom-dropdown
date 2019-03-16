@@ -64,7 +64,7 @@ template.innerHTML = `
     <div id='selected' class='selected'></div>
 `;
 
-const optionTagName = 'OPTION';
+const OPTION_TAG_NAME = 'OPTION';
 
 class CustomDropdown extends HTMLElement {
     constructor(){
@@ -89,7 +89,7 @@ class CustomDropdown extends HTMLElement {
 
     _setOptionsOnClickHandler() {
         this._slot.assignedNodes()
-            .filter(node => node.tagName === optionTagName)
+            .filter(node => node.tagName === OPTION_TAG_NAME)
             .map(option => {
                 option.addEventListener('click', this._onOptionClick.bind(this));
             });
